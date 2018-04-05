@@ -1,0 +1,26 @@
+{
+    "name": "ocio_odee_web/wcm8_emulsify",
+    "description": "Theme for WCM8 Websites.",
+    "type": "drupal-wcm-theme",
+    "homepage": "https://code.osu.edu/ocio_odee_web/wcm8_emulsify",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Melissa Miller",
+            "email": "miller.2676@osu.edu"
+        }
+    ],
+    "repositories": {
+    },
+    "require": {
+        "drupal-pattern-lab/add-attributes-twig-extension": "^1.0",
+        "drupal-pattern-lab/bem-twig-extension": "^1.0",
+        "drupal-pattern-lab/unified-twig-extensions": "^0.1",
+        "composer/installers": "^1.0.20"
+    },
+    "require-dev": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {},
+    "extra": []
+}
