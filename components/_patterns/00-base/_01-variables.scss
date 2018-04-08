@@ -6,8 +6,11 @@
 // components/_patterns/00-base/_breakpoints.scss
 
 // Fonts
-$font-body: Georgia, Times, "Times New Roman", serif;
-$font-heading: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-body: "proximanova", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-heading: "proximanova", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+
+$font: "proximanova", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-alt: 'Capita', "Times New Roman", serif;
 
 // Spacing
 $space: 1rem;

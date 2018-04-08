@@ -1,6 +1,6 @@
 items:
   - name: $white
-    value: white
+    value: '#fff'
   - name: $near-white
     value: '#f2f2f2'
   - name: $gray-lightest
@@ -12,11 +12,29 @@ items:
   - name: $gray
     value: '#666'
   - name: $gray-dark
-    value: '#4c4c4c'
+    value: '#4a4a4a'
   - name: $gray-darker
-    value: '#333'
+    value: '#313131'
+  - name: $gray-darkest
+    value: '#222'
   - name: $black
-    value: black
+    value: '#000'
+  - name: $red
+    value: '#b00'
+  - name: $red-dark
+    value: '#800'
+  - name: $teal
+    value: '#1c7c89'
+  - name: $green-dark
+    value: '#73792d'
+  - name: $orange-dark
+    value: '#c04f24'
+  - name: $violet
+    value: '#851e5e'
+  - name: $blue-dark
+    value: '#476c97'
+  - name: $purple
+    value: '#5d3f82'
 meta:
   description: >-
     To add to these items, use Sass variables that start with <code>$</code> in
