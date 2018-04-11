@@ -1,11 +1,9 @@
-site_name:
-  "Name of Website"
 img_src:
-  '../../images/logo.svg'
+  '../../images/logo.png'
 img_alt:
   'Logo'
 img_url:
-  'http://localhost:3000/pattern-lab/public'
+  'https://github.com/fourkitchens/wcm8_emulsify'
 image_link_base_class:
   'logo'
 items:
