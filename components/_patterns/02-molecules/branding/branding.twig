@@ -1,0 +1,14 @@
+{% set branding_base_class = branding_base_class|default('branding') %}
+{% set sitename_base_class = sitename_base_class|default('sitename') %}
+{% set logo_base_class = logo_base_class|default('logo') %}
+
+<div {{ bem(branding_base_class, (branding_modifiers), branding_blockname) }}>
+  {% block branding %}    
+    <div id="sitename" {{ bem(sitename_base_class, (sitename_modifiers), sitename_blockname) }}>
+      {{ site_name }}
+    </div>
+    <div id="logo" {{ bem(logo_base_class, (logo_modifiers), logo_blockname) }}>
+      {% include "@atoms/04-images/00-image/image.twig" %}
+    </div>
+  {% endblock %}
+</div>
