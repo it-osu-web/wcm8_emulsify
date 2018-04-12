@@ -11,3 +11,9 @@
 function wcm8_emulsify_preprocess(array &$variables, $hook) {
   $variables['base_path'] = base_path();
 }
+
+function wcm8_emulsify_preprocess_region(array &$variables) {
+  // Load the site name out of configuration.
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+}
