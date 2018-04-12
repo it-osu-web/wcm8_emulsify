@@ -6443,7 +6443,7 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 255
   Command: sh
   Arguments: -c gulp clean && gulp compile && gulp theme
   Directory: /Users/miller.2676/dev/d8-local-1/themes/custom/wcm8_emulsify

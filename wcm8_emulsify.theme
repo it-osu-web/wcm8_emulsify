@@ -4,3 +4,10 @@
  * @file
  * Functions to support theming in the Pattern Lab theme.
  */
+
+/**
+ * Implements hook_preprocess().
+ */
+function wcm8_emulsify_preprocess(array &$variables, $hook) {
+  $variables['base_path'] = base_path();
+}
