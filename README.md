@@ -11,7 +11,7 @@ Component-driven prototyping tool using [Pattern Lab v2](http://patternlab.io/) 
   
   WCM8 Emulsify supports both NPM and YARN.
 
-## How to use on a WCM 8 Site
+## How to install on a WCM 8 Site
 
   1. WCM8 Emulsify will already be added to site via WCM 8 Base starterkit.
   2. Enable WCM8 Emulsify `drush theme-enable wcm8_emulsify`
@@ -25,6 +25,12 @@ Component-driven prototyping tool using [Pattern Lab v2](http://patternlab.io/) 
 The `start` command spins up a local server, compiles everything (runs all required gulp tasks), and watches for changes.
 
   1. `npm start` or `yarn start`
+  
+  
+## How to work on the site theme
+
+TBD
+
 
   ---
 
