@@ -14,9 +14,10 @@ Component-driven prototyping tool using [Pattern Lab v2](http://patternlab.io/) 
 ## How to use on a WCM 8 Site
 
   1. WCM8 Emulsify will already be added to site via WCM 8 Base starterkit.
-  2. Enable WCM8 Emulsify and its dependencies `drush en wcm8_emulsify components unified_twig_ext -y`
-  3. Navigate to the root of your theme
-  4. `npm install` or `yarn install`
+  2. Enable WCM8 Emulsify `drush theme-enable wcm8_emulsify`
+  3. Enable its dependencies `drush en components unified_twig_ext -y`
+  4. Navigate to the root of your theme
+  5. `npm install` or `yarn install`
 
 
 ## Starting Pattern Lab and watch task
