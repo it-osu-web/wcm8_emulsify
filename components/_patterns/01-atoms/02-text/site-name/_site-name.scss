@@ -1,3 +1,15 @@
 .sitename {
-  background: $teal;
+  @include heading-xl($color: $white);
+}
+
+//styleguide styles only
+#atoms-site-name {
+  .sitename {
+    background: $gray-darker;
+    padding: 5px 10px;
+  }
+
+  p {
+    margin-top: 10px;
+  }
 }
