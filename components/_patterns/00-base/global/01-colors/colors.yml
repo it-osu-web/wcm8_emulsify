@@ -1,4 +1,6 @@
 items:
+  - name: $clear
+    value: 'rgba(0, 0, 0, 0)'
   - name: $white
     value: '#fff'
   - name: $near-white
