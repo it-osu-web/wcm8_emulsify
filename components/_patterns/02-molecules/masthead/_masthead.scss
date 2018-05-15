@@ -1,18 +1,23 @@
 #masthead {
-  background: $near-white;
   @include clearfix;
+
+  background: $near-white;
   padding: 2em 0;
 }
+
 #site-name {
-  float:left;
+  float: left;
   font-size: 2.4rem;
   font-weight: 600;
+
   a {
     text-decoration: none;
   }
 }
+
 #site-logo {
-float: right;
+  float: right;
+
   img {
     height: 150px;
   }
