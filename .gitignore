@@ -1,5 +1,5 @@
 # Ignore compiled files.
-dist
+# dist -- commenting out for now until proper deploy method is ready
 vendor
 
 # Pattern Lab (ignored initially)
