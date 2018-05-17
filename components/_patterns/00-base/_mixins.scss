@@ -33,6 +33,7 @@
 
 /// Mixin - Wrapper
 /// Outer container mixin for large screens
+///applying per element or region to preserve full screen backgrounds
 @mixin wrapper {
   margin: 0 auto;
   max-width: $max-width;

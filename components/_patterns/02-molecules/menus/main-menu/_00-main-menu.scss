@@ -14,6 +14,10 @@ $main-menu-medium: 43em;
   }
 }
 
+.main-nav__inner {
+  @include wrapper;
+}
+
 // UL
 .main-menu {
   @include list-reset;

@@ -49,6 +49,10 @@ a#skip:focus:hover {
   overflow: hidden;
 }
 
+.navbar__inner {
+  @include wrapper;
+}
+
 #osu_navbar * {
   font-family: 'proximanova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -80,7 +84,7 @@ a#skip:focus:hover {
   display: block;
   text-indent: -9999px;
   background: url(https://www.osu.edu/assets/web/navbar/osu_navbar/images/osu_name.png) 0 0 no-repeat;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 /* Links */
@@ -96,6 +100,10 @@ a#skip:focus:hover {
   list-style: none;
   float: left;
   margin-right: 1em;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 #osu_navbar div.links ul li a {
@@ -107,19 +115,8 @@ a#skip:focus:hover {
   text-decoration: underline;
 }
 
-/* Switch Navbar container from fixed 960px centered to full-width */
-@media only screen and (max-width: 990px) {
-  #osu_navbar .container {
-    width: 100%;
-    margin: 0 10px;
-    min-width: 300px;
-  }
-  #osu_navbar div.container .univ_name a { margin-left: 0; }
-  #osu_navbar div.links ul { margin-right: 10px; }
-}
-
-/* Replace text links with icons at 600px */
-@media only screen and (max-width: 600px) {
+/* Replace text links with icons at 41em */
+@media only screen and (max-width: 41em) {
   #osu_navbar div.links ul {
     margin-top: -2px;
     margin-right: 10px;
@@ -159,8 +156,8 @@ a#skip:focus:hover {
 }
 
 /* Retina icons */
-@media only screen and (max-width: 700px) and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (max-width: 700px) and (-o-min-device-pixel-ratio: 2/1) {
+@media only screen and (max-width: 41em) and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (max-width: 41em) and (-o-min-device-pixel-ratio: 2/1) {
   #osu_navbar .univ_name a {
     background-image: url(https://www.osu.edu/assets/web/navbar/osu_navbar/images/osu_name@2x.png) !important;
     background-size: contain;

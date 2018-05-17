@@ -60,16 +60,20 @@
 
   <main role="main" class="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    {% if page.sidebar %}
-      <aside class="main-sidebar" role="complementary">
-        {{ page.sidebar }}
-      </aside>
-    {% endif %}
-
-    <div class="main-content{% if page.sidebar %}--with-sidebar{% endif %}">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+    
+    <div class="main__inner">
+    
+      {% if page.sidebar %}
+        <aside class="main-sidebar" role="complementary">
+          {{ page.sidebar }}
+        </aside>
+      {% endif %}
+  
+      <div class="main-content{% if page.sidebar %}--with-sidebar{% endif %}">
+        {{ page.content }}
+      </div>{# /.layout-content #}
+      
+    </div>
 
   </main>
 
