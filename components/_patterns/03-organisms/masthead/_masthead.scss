@@ -2,7 +2,7 @@
   @include clearfix;
 
   background: $gray-darker;
-  padding: 1.5em 0;
+  padding: 1.25em 0;
 
   .masthead__inner {
     @include wrapper;
@@ -24,6 +24,6 @@
   float: right;
 
   img {
-    height: 150px;
+    height: 135px;
   }
 }

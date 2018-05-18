@@ -36,9 +36,14 @@
 ///applying per element or region to preserve full screen backgrounds
 @mixin wrapper {
   margin: 0 auto;
+  padding: 0 3%;
   max-width: $max-width;
 
   @include clearfix;
+
+  @include xl {
+    padding: 0;
+  }
 }
 
 /// Mixin - More Link
