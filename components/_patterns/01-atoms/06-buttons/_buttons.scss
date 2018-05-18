@@ -1,4 +1,4 @@
-@mixin button($bg:$clear, $borderColor:$red, $color:$red, $hoverBg: $red, $hoverColor: $white) {
+@mixin button($bg:$red, $borderColor:$clear, $color:$white, $hoverBg: $red-dark, $hoverColor: $white) {
   background-color: $bg;
   border: 1px solid $borderColor;
   border-radius: 4px;
@@ -18,18 +18,31 @@
     background-color: $hoverBg;
     color: $hoverColor;
   }
+  
+  &:focus {
+    outline: 2px dotted black;
+    outline-offset: 3px;
+  }
 }
 
 @mixin button-gray {
-  @include button($clear, $gray, $gray, $gray);
+  @include button($gray, $clear, $white, $gray-darker);
+}
+
+@mixin button-teal {
+  @include button($teal, $clear, $white, darken($teal, 10%));
 }
 
 @mixin button-alt {
-  @include button($red, $clear, $white, $red-dark);
+  @include button($clear, $red, $red, $red);
 }
 
-@mixin button-alt-2 {
-  @include button($gray, $clear, $white, $gray-darker);
+@mixin button-alt-teal {
+  @include button($clear, $teal, $teal, $teal);
+}
+
+@mixin button-alt-gray {
+  @include button($clear, $gray, $gray, darken($gray, 6%));
 }
 
 .button {
@@ -39,6 +52,11 @@
     @include button;
     @include button-gray;
   }
+  
+  &--teal {
+    @include button;
+    @include button-teal;
+  }
 
   &--alt {
     @include button;
@@ -47,6 +65,11 @@
 
   &--alt-gray {
     @include button;
-    @include button-alt-2;
+    @include button-alt-gray;
+  }
+    
+  &--alt-teal {
+    @include button;
+    @include button-alt-teal;
   }
 }
