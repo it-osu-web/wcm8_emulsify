@@ -18,7 +18,7 @@
     background-color: $hoverBg;
     color: $hoverColor;
   }
-  
+
   &:focus {
     outline: 2px dotted black;
     outline-offset: 3px;
@@ -52,7 +52,7 @@
     @include button;
     @include button-gray;
   }
-  
+
   &--teal {
     @include button;
     @include button-teal;
@@ -67,7 +67,7 @@
     @include button;
     @include button-alt-gray;
   }
-    
+
   &--alt-teal {
     @include button;
     @include button-alt-teal;
