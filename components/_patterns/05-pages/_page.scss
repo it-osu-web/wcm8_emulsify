@@ -1,35 +1,5 @@
-//
-// General Layout
-//
-
-.header,
-.main,
-.footer {
-  margin-bottom: 4em;
-}
+//temporary styles while components are still being built
 
 .main__inner {
   @include wrapper;
-
-  //background: aqua;
-}
-
-.main-sidebar {
-  @include large {
-    @include grid-span(3,1);
-  }
-
-  //background: purple;
-}
-
-.main-content {
-  padding: 0 1em;
-
-  @include large {
-    padding: 0;
-
-    &--with-sidebar {
-      @include grid-span(9,4);
-    }
-  }
 }

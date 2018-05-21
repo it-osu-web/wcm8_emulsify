@@ -45,24 +45,26 @@
 #}
 <div class="layout-container">
 
-  {{ page.header }}
-
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
-
-  {{ page.breadcrumb }}
-
   {{ page.highlighted }}
-
-  {{ page.help }}
-
-  {{ messages }}
+  
+  {% include "@templates/fixed-regions/site-header/site-header.twig" with {
+  site_name: site_name
+  }%}
+  
+  {{ page.primary_menu }}
+  {{ page.hero }}
 
   <main role="main" class="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {{ page.breadcrumb }}
+    {{ page.local_tasks }}
+    {{ page.help }}
+    {{ messages }}
+  
+    <a id="main-content" tabindex="-1"></a>
     
     <div class="main__inner">
-    
+      {{ page.content_before }}
+      
       {% if page.sidebar %}
         <aside class="main-sidebar" role="complementary">
           {{ page.sidebar }}
@@ -71,14 +73,14 @@
   
       <div class="main-content{% if page.sidebar %}--with-sidebar{% endif %}">
         {{ page.content }}
-      </div>{# /.layout-content #}
+      </div>
       
-    </div>
-
+      {{ page.content_after }}
+      
+    </div>{# /.main__inner #}
   </main>
 
-  {% if page.footer %}
-    {{ page.footer }}
-  {% endif %}
+  {{ page.page_footer }}
+  {{ page.site_footer }}
 
 </div>{# /.layout-container #}

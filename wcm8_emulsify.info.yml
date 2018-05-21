@@ -23,10 +23,17 @@ ckeditor_stylesheets:
   - dist/style.css
 
 regions:
-  header: Header
-  content: Content  # the content region is required
+  highlighted: 'Highlighted'
+  primary_menu: 'Primary Menu'
+  hero: 'Hero'
+  page_header: 'Page Header: Page Titles & Header Images'
+  breadcrumb: 'Breadcrumbs'
+  local_tasks: 'Local Tasks'
+  content_before: 'Content: Before'
+  content: 'Content'
   sidebar: 'Sidebar'
-  footer: Footer
+  content_after: 'Content: After'
+  page_footer: 'Page Footer'
 
 # Remove unwanted system stylesheets
 # stylesheets-remove:
