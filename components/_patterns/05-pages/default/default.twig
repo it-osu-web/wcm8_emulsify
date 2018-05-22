@@ -55,15 +55,14 @@
   {{ page.hero }}
 
   <main role="main" class="main">
-    {{ page.breadcrumb }}
-    {{ page.local_tasks }}
-    {{ page.help }}
-    {{ messages }}
-  
-    <a id="main-content" tabindex="-1"></a>
-    
     <div class="main__inner">
-      {{ page.content_before }}
+    
+      {{ page.breadcrumb }}
+      {{ page.local_tasks }}
+      {{ page.help }}
+      {{ messages }}
+    
+      <a id="main-content" tabindex="-1"></a>
       
       {% if page.sidebar %}
         <aside class="main-sidebar" role="complementary">
@@ -81,6 +80,5 @@
   </main>
 
   {{ page.page_footer }}
-  {{ page.site_footer }}
 
 </div>{# /.layout-container #}
