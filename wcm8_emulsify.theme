@@ -5,15 +5,59 @@
  * Functions to support theming in the Pattern Lab theme.
  */
 
+
+/**
+ * Adds additional theme settings.
+ */
+function wcm8_emulsify_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface &$form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  $form['theme_customization'] = array (
+    '#type'     => 'fieldset',
+    '#title'    => t('Theme Customization'),
+    '#markup'   => t('Customize the look and feel of the site.')
+  );
+
+  $form['theme_customization']['colors'] = array(
+    '#type'          => 'fieldset',
+    '#title'         => t('Site Colors')
+  );
+  
+  $navbar_color_options = [
+    'light' => 'Light',
+    'dark'  => 'Dark'
+  ];
+  
+  $form['theme_customization']['colors']['osu_navbar_color'] = array(
+    '#type'          => 'radios',
+    '#title'         => t('OSU Nav Bar'),
+    '#default_value' => theme_get_setting('osu_navbar_color'),
+    '#options'       => $navbar_color_options,
+  );
+}
+
+/**
+ * Clear caches when settings change.
+ */
+function wcm8_emulsify_settings_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  drupal_flush_all_caches();
+}
+
 /**
  * Implements hook_preprocess().
  */
-function wcm8_emulsify_preprocess(array &$variables, $hook) {
+ function wcm8_emulsify_preprocess(array &$variables, $hook) {
+  //all-purpose variables
   $variables['base_path'] = base_path();
-}
-
-function wcm8_emulsify_preprocess_page(array &$variables) {
+  
   // Load the site name out of configuration.
   $config = \Drupal::config('system.site');
   $variables['site_name'] = $config->get('name');
+  
+  //theme setting variables
+  $variables['osu_navbar_color'] = theme_get_setting('osu_navbar_color');
+  
 }
