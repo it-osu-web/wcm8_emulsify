@@ -15,12 +15,30 @@
  */
 #}
 
+
+{#
+/**
+ * Regions will be assigned a "region-inner" constrained div by default.
+ * If you want a particular region to be full width instead,
+ * add the region name to the "full_width_regions" array.
+ */
+#}
+
+
+{% set full_width_regions = ['hero'] %}
+
 {% set region_base_class = 'region--' ~ region %}
 
 {% if content %}
-
-  <div {{ bem(region_base_class) }} >
-    {{ content }}
-  </div>
-
+  {% if region in full_width_regions %}
+    <div {{ bem(region_base_class) }} >
+      {{ content }}
+    </div>
+  {% else %}
+    <div {{ bem(region_base_class) }} >
+      <div class="region-inner">
+        {{ content }}
+      </div>
+    </div>
+  {% endif %}
 {% endif %}
