@@ -7241,7 +7241,7 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 255
+  Exit code: 1
   Command: sh
   Arguments: -c gulp clean && gulp compile && gulp theme
   Directory: /Users/miller.2676/dev/d8local/web/themes/wcm/wcm8_emulsify
