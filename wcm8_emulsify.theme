@@ -27,16 +27,32 @@ function wcm8_emulsify_form_system_theme_settings_alter(&$form, \Drupal\Core\For
   );
   
   $navbar_color_options = [
-    'light' => 'Light',
-    'dark'  => 'Dark'
+    'light' => t('Light'),
+    'dark'  => t('Dark')
   ];
   
   $form['theme_customization']['colors']['osu_navbar_color'] = array(
     '#type'          => 'radios',
     '#title'         => t('OSU Nav Bar'),
     '#default_value' => theme_get_setting('osu_navbar_color'),
-    '#options'       => $navbar_color_options,
+    '#options'       => $navbar_color_options
   );
+  
+  $masthead_color_options = [
+    'dk-gray' => t('Dark Gray'),
+    'md-gray' => t('Medium Gray'),
+    'lt-gray' => t('Light Gray'),
+    'white'   => t('White')
+  ];
+
+  
+  $form['theme_customization']['colors']['masthead_color'] = array(
+    '#type'          => 'radios',
+    '#title'         => t('Masthead'),
+    '#default_value' => theme_get_setting('masthead_color'),
+    '#options'       => $masthead_color_options
+  );
+  
 }
 
 /**
@@ -59,5 +75,6 @@ function wcm8_emulsify_settings_submit(&$form, \Drupal\Core\Form\FormStateInterf
   
   //theme setting variables
   $variables['osu_navbar_color'] = theme_get_setting('osu_navbar_color');
+  $variables['masthead_color'] = theme_get_setting('masthead_color');
   
 }

@@ -113,5 +113,5 @@
   @include osu-navbar;
 }
 #osu_navbar.dark {
-  @include osu-navbar(#333, white, "/images/white/");
+  @include osu-navbar($gray-darker, $white, "/images/white/");
 }
