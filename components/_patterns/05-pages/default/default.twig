@@ -48,35 +48,33 @@
   {{ page.highlighted }}
   
   {% include "@templates/fixed-regions/site-header/site-header.twig" with {
-  site_name: site_name
+    site_name: site_name
   }%}
   
   {{ page.primary_menu }}
   {{ page.hero }}
 
   <main role="main" class="main">
-    <div class="main__inner">
     
-      {{ page.breadcrumb }}
-      {{ page.local_tasks }}
-      {{ page.help }}
-      {{ messages }}
-    
-      <a id="main-content" tabindex="-1"></a>
-      
-      {% if page.sidebar %}
-        <aside class="main-sidebar" role="complementary">
-          {{ page.sidebar }}
-        </aside>
-      {% endif %}
+    {{ page.breadcrumb }}
+    {{ page.local_tasks }}
+    {{ page.help }}
+    {{ messages }}
   
-      <div class="main-content{% if page.sidebar %}--with-sidebar{% endif %}">
-        {{ page.content }}
-      </div>
+    <a id="main-content" tabindex="-1"></a>
+    
+    {% if page.sidebar %}
+      <aside class="main-sidebar" role="complementary">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+
+    <div class="main-content{% if page.sidebar %}--with-sidebar{% endif %}">
+      {{ page.content }}
+    </div>
+    
+    {{ page.content_after }}
       
-      {{ page.content_after }}
-      
-    </div>{# /.main__inner #}
   </main>
 
   {{ page.page_footer }}
