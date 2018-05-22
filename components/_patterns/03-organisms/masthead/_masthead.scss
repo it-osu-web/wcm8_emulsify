@@ -1,33 +1,32 @@
 @mixin masthead($bg-color:$gray-darker, $text-color: $white) {
   @include clearfix;
-  
+
   background: $bg-color;
   padding: 1.25em 0;
-  
+
   .masthead__inner {
     @include wrapper;
   }
-  
+
   #site-name {
     @include heading-xl($color: $text-color);
-  
+
     float: left;
     padding-top: 1.5em;
-  
+
     a:hover {
       color: $text-color;
     }
   }
-  
+
   #site-logo {
     float: right;
-  
+
     img {
       height: 135px;
     }
   }
 }
-
 
 #masthead,
 #masthead.dk-gray {

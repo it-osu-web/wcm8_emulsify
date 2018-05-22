@@ -1,5 +1,4 @@
-@mixin osu-navbar($bg-color:$gray-lightest, $text-color:$gray-darker, $image-src:"/images/")  {
-
+@mixin osu-navbar($bg-color:$gray-lightest, $text-color:$gray-darker, $image-src:"/images/") {
   background: $bg-color;
   color: $text-color;
   border-bottom: 5px solid $red;
@@ -106,12 +105,11 @@
   }
 }
 
-
-
 #osu_navbar,
 #osu_navbar.light {
   @include osu-navbar;
 }
+
 #osu_navbar.dark {
   @include osu-navbar($gray-darker, $white, "/images/white/");
 }
