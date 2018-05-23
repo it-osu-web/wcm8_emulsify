@@ -17,4 +17,8 @@ npm-debug.log
 # Git deploy
 .publish
 
+# Error logs
+yarn-error.log
+
+#OS generated
 .DS_Store
