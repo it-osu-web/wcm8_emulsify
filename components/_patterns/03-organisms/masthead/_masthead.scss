@@ -1,4 +1,4 @@
-@mixin masthead($bg-color:$gray-darker, $text-color: $white) {
+@mixin masthead($bg-color: $gray-darker, $text-color: $white) {
   @include clearfix;
 
   background: $bg-color;

@@ -1,9 +1,25 @@
-#site-footer {
-  background: $gray-darker;
-  color: white;
+@mixin footer($bg-color: $gray-darker, $text-color: $white) {
+  background: $bg-color;
+  color: $text-color;
 
   .site-footer__inner {
     @include wrapper;
   }
+}
 
+#site-footer,
+#site-footer.dk-gray {
+  @include footer;
+}
+
+#site-footer.md-gray {
+  @include footer($gray, $white);
+}
+
+#site-footer.lt-gray {
+  @include footer($gray-lightest, $gray-darker);
+}
+
+#site-footer.white {
+  @include footer($white, $gray-dark);
 }
