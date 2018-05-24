@@ -21,9 +21,20 @@ function wcm8_emulsify_form_system_theme_settings_alter(&$form, \Drupal\Core\For
     '#markup'   => t('Customize the look and feel of the site.')
   );
 
-  $form['theme_customization']['colors'] = array(
+  $form['theme_customization']['header'] = array(
     '#type'          => 'fieldset',
-    '#title'         => t('Site Colors')
+    '#title'         => t('Header')
+  );
+  
+  $header_variant_options = [
+    'standard' => t('Standard')
+  ];
+  
+  $form['theme_customization']['header']['header_variant'] = array(
+    '#type'          => 'radios',
+    '#title'         => t('Header Variant'),
+    '#default_value' => theme_get_setting('header_variant'),
+    '#options'       => $header_variant_options
   );
   
   $navbar_color_options = [
@@ -31,9 +42,9 @@ function wcm8_emulsify_form_system_theme_settings_alter(&$form, \Drupal\Core\For
     'dark'  => t('Dark')
   ];
   
-  $form['theme_customization']['colors']['osu_navbar_color'] = array(
+  $form['theme_customization']['header']['osu_navbar_color'] = array(
     '#type'          => 'radios',
-    '#title'         => t('OSU Nav Bar'),
+    '#title'         => t('OSU Navbar Color'),
     '#default_value' => theme_get_setting('osu_navbar_color'),
     '#options'       => $navbar_color_options
   );
@@ -45,12 +56,30 @@ function wcm8_emulsify_form_system_theme_settings_alter(&$form, \Drupal\Core\For
     'white'   => t('White')
   ];
 
-  
-  $form['theme_customization']['colors']['masthead_color'] = array(
+  $form['theme_customization']['header']['masthead_color'] = array(
     '#type'          => 'radios',
-    '#title'         => t('Masthead'),
+    '#title'         => t('Masthead Color'),
     '#default_value' => theme_get_setting('masthead_color'),
     '#options'       => $masthead_color_options
+  );
+  
+  $form['theme_customization']['footer'] = array(
+    '#type'          => 'fieldset',
+    '#title'         => t('Footer')
+  );
+  
+  $footer_color_options = [
+    'dk-gray' => t('Dark Gray'),
+    'md-gray' => t('Medium Gray'),
+    'lt-gray' => t('Light Gray'),
+    'white'   => t('White')
+  ];
+
+  $form['theme_customization']['footer']['footer_color'] = array(
+    '#type'          => 'radios',
+    '#title'         => t('Footer Color'),
+    '#default_value' => theme_get_setting('footer_color'),
+    '#options'       => $footer_color_options
   );
   
 }
@@ -74,7 +103,8 @@ function wcm8_emulsify_settings_submit(&$form, \Drupal\Core\Form\FormStateInterf
   $variables['site_name'] = $config->get('name');
   
   //theme setting variables
+  $variables['header_variant'] = theme_get_setting('header_variant');
   $variables['osu_navbar_color'] = theme_get_setting('osu_navbar_color');
   $variables['masthead_color'] = theme_get_setting('masthead_color');
-  
+  $variables['footer_color'] = theme_get_setting('footer_color');
 }
