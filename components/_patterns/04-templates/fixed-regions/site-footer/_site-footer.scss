@@ -1,1 +1,9 @@
-// Empty
+#site-footer {
+  background: $gray-darker;
+  color: white;
+
+  .site-footer__inner {
+    @include wrapper;
+  }
+
+}

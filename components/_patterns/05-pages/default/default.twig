@@ -77,6 +77,10 @@
       
   </main>
 
-  {{ page.page_footer }}
+  {{ page.pre_footer }}
+  
+  {% include "@templates/fixed-regions/site-footer/site-footer.twig" with {
+    site_name: site_name
+  }%}
 
 </div>{# /.layout-container #}
