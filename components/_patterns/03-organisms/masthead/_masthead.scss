@@ -4,7 +4,7 @@
   background: $bg-color;
   padding: 1.25em 0;
 
-  .masthead__inner {
+  .masthead--inner {
     @include wrapper;
   }
 
@@ -42,5 +42,5 @@
 }
 
 #masthead.white {
-  @include masthead($white, $gray-darker);
+  @include masthead($white, $gray-dark);
 }

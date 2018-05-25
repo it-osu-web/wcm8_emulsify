@@ -2,3 +2,5 @@ site_name:
   Name of the Website
 masthead_color:
   dk-gray
+footer_color:
+  dk-gray

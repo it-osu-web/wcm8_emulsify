@@ -3,7 +3,7 @@
   color: $text-color;
   border-bottom: 5px solid $red;
 
-  .navbar__inner {
+  .navbar--inner {
     @include wrapper;
   }
 
@@ -52,7 +52,7 @@
           margin-right: 0.5em;
 
           @include large {
-            margin-right: 1.25em;
+            margin-right: 1.2em;
           }
 
           &:last-child {
