@@ -36,7 +36,7 @@
           flex: auto;
   padding: 0.3em;
   margin: 0 0.5em 0.5em 0;
-  min-width: 7em;
+  min-width: 8em;
   max-width: 10em;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -52,4 +52,30 @@
 .sg-label {
   font-size: 90%;
   line-height: 1;
+}
+
+.sg-subtype {
+  margin-top: 6em;
+}
+
+.sg-subtype h2 {
+  background: #666;
+}
+
+a.patternLink {
+  margin-top: 1em;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 12px 15px 10px 15px;
+  display: block;
+}
+
+a.patternLink:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+h3.sg-pattern-title {
+  padding-left: 3px !important;
 }
