@@ -1,5 +1,28 @@
-#site-wordmark {
-  img {
-    width: 280px;
+#address-block {
+  #site-wordmark {
+    margin-bottom: 1em;
+
+    img {
+      width: 280px;
+    }
+  }
+
+  #site-address {
+    p {
+      margin: 0;
+      font-size: 95%;
+      line-height: 1.35;
+    }
+
+    .site-name {
+      font-weight: 600;
+      font-size: 105%;
+      margin-bottom: 2px;
+    }
+
+    .pipe {
+      font-size: 120%;
+      vertical-align: -2%;
+    }
   }
 }

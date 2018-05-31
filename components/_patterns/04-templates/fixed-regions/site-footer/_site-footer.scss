@@ -1,10 +1,18 @@
-@mixin footer($bg-color: $gray-darker, $text-color: $white) {
+@mixin footer($bg-color: $gray-darker, $text-color: $white, $link-color: $gray-lighter, $pipe-color: $gray-lighter) {
   background: $bg-color;
   color: $text-color;
   padding: 1.5em 0 1em;
 
   .site-footer__inner {
     @include wrapper;
+
+    a {
+      color: $link-color;
+    }
+
+    .pipe {
+      color: $pipe-color;
+    }
   }
 }
 
@@ -14,13 +22,13 @@
 }
 
 #site-footer.md-gray {
-  @include footer($gray, $white);
+  @include footer($gray, $white, $gray-lightest, $gray-lightest);
 }
 
 #site-footer.lt-gray {
-  @include footer($gray-lightest, $gray-darker);
+  @include footer($gray-lightest, $gray-darker, $red, $red);
 }
 
 #site-footer.white {
-  @include footer($white, $gray-dark);
+  @include footer($white, $gray-dark, $red, $red);
 }

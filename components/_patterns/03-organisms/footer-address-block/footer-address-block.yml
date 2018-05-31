@@ -1,4 +1,20 @@
-site_name: 
-  Name of Website
 footer_color: 
   white
+site_name: 
+  Name of Website
+address_1:
+  100 Mount Hall
+address_2: 
+ 1050 Carmack Road
+city:
+  Columbus
+state:
+  OH
+zip:
+  43210
+phone:
+  614-292-8860
+fax:
+  614-292-8860
+contact_email:
+  odee@osu.edu

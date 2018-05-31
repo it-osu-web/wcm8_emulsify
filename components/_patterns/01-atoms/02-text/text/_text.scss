@@ -46,3 +46,8 @@ body {
     @extend .hr;
   }
 }
+
+.pipe {
+  margin: 0 3px;
+  color: $red;
+}

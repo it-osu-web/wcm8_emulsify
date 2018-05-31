@@ -10,8 +10,24 @@
   <div id="site-wordmark">
     <a href="http://osu.edu" target="_blank"><img src="{{ base_path ~ directory }}/images/osu-logos/wordmark/osu-footer-wordmark-{{ footer_color }}.svg" alt="The Ohio State University" /></a>
   </div>
-  <div id="site-address">
+  <address id="site-address">
     <p class="site-name">{{ site_name }}</p>
-    <p> Other address info will go here</p>
-  </div>
+    
+    {% if address_1|length and address_2|length %}
+      <p>{{ address_1 }}<span class="pipe"> | </span>{{ address_2 }}<span class="pipe"> | </span>{{ city }}, {{ state }} {{ zip }}</p>
+    {% else %}
+      <p>{{ address_1 }}{{ address_2 }}<span class="pipe"> | </span>{{ city }}, {{ state }} {{ zip }}</p>
+    {% endif %}
+  
+    {% if phone|length and fax|length %}  
+      <p>Phone: <a href="tel:{{ phone }}">{{ phone }}</a><span class="pipe"> | </span>Fax: {{ fax }}</p>
+    {% else %}
+      <p> {% if phone|length %} Phone: <a href="tel:{{ phone }}">{{ phone }}</p> {% elseif fax|length %} Fax: {{ fax }} {% endif %}</p>
+    {% endif %}
+    
+    {% if contact_email|length %}
+    <p>Email: <a href="mailto:{{ contact_email }}">{{ contact_email }}</a></p>
+    {% endif %}
+  
+  </address>
 </div>

@@ -98,13 +98,31 @@ function wcm8_emulsify_settings_submit(&$form, \Drupal\Core\Form\FormStateInterf
   //all-purpose variables
   $variables['base_path'] = base_path();
   
-  // Load the site name out of configuration.
-  $config = \Drupal::config('system.site');
-  $variables['site_name'] = $config->get('name');
-  
   //theme setting variables
   $variables['header_variant'] = theme_get_setting('header_variant');
   $variables['osu_navbar_color'] = theme_get_setting('osu_navbar_color');
   $variables['masthead_color'] = theme_get_setting('masthead_color');
   $variables['footer_color'] = theme_get_setting('footer_color');
+  
+  // Load the site name out of configuration.
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+  
+  // Load variables from Site Information module.
+  $siteinfo_config = \Drupal::config('wcm8_siteinfo.settings');
+  $siteinfo_vars = [
+    'address_1', 
+    'address_2',
+    'city',
+    'state',
+    'zip',
+    'phone',
+    'fax',
+    'contact_email'
+  ];
+  foreach ($siteinfo_vars as $siteinfo_var) {
+    $variables[$siteinfo_var] = $siteinfo_config->get($siteinfo_var);
+  }
 }
+
+
