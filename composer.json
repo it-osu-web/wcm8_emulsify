@@ -1,7 +1,7 @@
 {
     "name": "ocio_odee_web/wcm8_emulsify",
     "description": "Theme for WCM8 Websites.",
-    "type": "drupal-theme",
+    "type": "drupal-wcm-theme",
     "homepage": "https://code.osu.edu/ocio_odee_web/wcm8_emulsify",
     "license": "MIT",
     "authors": [
