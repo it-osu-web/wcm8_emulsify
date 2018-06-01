@@ -1,17 +1,7 @@
 <footer id="site-footer" class={{ footer_color }}>
   <div class="site-footer__inner">
   
-    {% include "@organisms/footer-address-block/footer-address-block.twig" with {
-      site_name: site_name,
-      address_1: address_1,
-      address_2: address_2,
-      city: city,
-      state: state,
-      zip: zip,
-      phone: phone,
-      fax: fax,
-      contact_email: contact_email,
-    }%}
+    {% include "@organisms/footer-address-block/footer-address-block.twig" %}
     
     <div class="footer-text">
       
@@ -34,7 +24,9 @@
         
       {% endif %}
       
-    </div>
+    </div>{# end .footer-text #}
     
-  </div>
+    {% include "@organisms/social-media-links/social-media-links.twig" %}
+    
+  </div>{# end .site-footer__inner #}
 </footer>
