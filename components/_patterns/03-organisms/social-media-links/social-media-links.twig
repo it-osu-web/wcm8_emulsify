@@ -7,13 +7,13 @@
 #}
 
 {% set social_links = [ 
-  { 'name':'twitter', 'url': twitter, 'icon': 'twitter', 'prefix': 'fab' }, 
-  { 'name':'facebook', 'url': facebook, 'icon': 'facebook', 'prefix': 'fab' },
-  { 'name':'linkedin', 'url': linkedin, 'icon': 'linkedin', 'prefix': 'fab' },
-  { 'name':'googleplus', 'url': googleplus, 'icon': 'google-plus-g', 'prefix': 'fab' },
-  { 'name':'youtube', 'url': youtube, 'icon': 'youtube', 'prefix': 'fab' },
-  { 'name':'instagram', 'url': instagram, 'icon': 'instagram', 'prefix': 'fab' },
-  { 'name':'photos', 'url': photos, 'icon': 'camera', 'prefix': 'fas' }
+  { 'name':'Twitter', 'url': twitter, 'icon': 'twitter', 'prefix': 'fab' }, 
+  { 'name':'Facebook', 'url': facebook, 'icon': 'facebook', 'prefix': 'fab' },
+  { 'name':'LinkedIn', 'url': linkedin, 'icon': 'linkedin', 'prefix': 'fab' },
+  { 'name':'Google Plus', 'url': googleplus, 'icon': 'google-plus-g', 'prefix': 'fab' },
+  { 'name':'YouTube', 'url': youtube, 'icon': 'youtube', 'prefix': 'fab' },
+  { 'name':'Instagram', 'url': instagram, 'icon': 'instagram', 'prefix': 'fab' },
+  { 'name':'Photo service', 'url': photos, 'icon': 'camera', 'prefix': 'fas' }
 ] %}
 
 <div id="social-media-block" class="social-media">
@@ -24,8 +24,8 @@
       {% if social_link.url|length %}
     
         <li class="social-media__item social-media__item--{{ social_link.name }}" >
-          <a href="{{ social_link.url }}" title="{{ social_link.name }} link for {{ site_name }}">
-            <i title="{{ social_link.name }} icon" class="{{ social_link.prefix}} fa-fw fa-2x fa-{{ social_link.icon }}"></i>
+          <a href="{{ social_link.url }}" title="{{ social_link.name }} profile link for {{ site_name }}">
+            <i class="{{ social_link.prefix}} fa-fw fa-2x fa-{{ social_link.icon }}"></i>
           </a>
         </li>
       
