@@ -111,6 +111,7 @@ function wcm8_emulsify_settings_submit(&$form, \Drupal\Core\Form\FormStateInterf
   // Load variables from Site Information module.
   $siteinfo_config = \Drupal::config('wcm8_siteinfo.settings');
   $siteinfo_vars = [
+    'footer_text',
     'address_1', 
     'address_2',
     'city',
@@ -119,11 +120,16 @@ function wcm8_emulsify_settings_submit(&$form, \Drupal\Core\Form\FormStateInterf
     'phone',
     'fax',
     'contact_email',
-    'footer_text'
+    'twitter',
+    'facebook',
+    'linkedin',
+    'googleplus',
+    'youtube',
+    'instagram',
+    'photos'
   ];
   foreach ($siteinfo_vars as $siteinfo_var) {
     $variables[$siteinfo_var] = $siteinfo_config->get($siteinfo_var);
   }
 }
-
 

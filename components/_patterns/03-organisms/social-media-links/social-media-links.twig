@@ -20,7 +20,16 @@
   <ul {{ bem('list', '' ,'social-media') }} >
   
     {% for social_link in social_links %}
-      <li class="social-media__item social-media__item--{{ social_link.name }}" ><a href="{{ social_link.url }}" title="{{ social_link.name }} link for {{ site_name }}"><i title="{{ social_link.name }} icon" class="{{ social_link.prefix}} fa-fw fa-2x fa-{{ social_link.icon }}"></i></a></li>
+      
+      {% if social_link.url|length %}
+    
+        <li class="social-media__item social-media__item--{{ social_link.name }}" >
+          <a href="{{ social_link.url }}" title="{{ social_link.name }} link for {{ site_name }}">
+            <i title="{{ social_link.name }} icon" class="{{ social_link.prefix}} fa-fw fa-2x fa-{{ social_link.icon }}"></i>
+          </a>
+        </li>
+      
+      {% endif %}
     
     {% endfor %}
   </ul>
