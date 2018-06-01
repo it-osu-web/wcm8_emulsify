@@ -1,4 +1,4 @@
-@mixin footer($bg-color: $gray-darker, $text-color: $white, $link-color: $gray-lighter, $pipe-color: $gray-lighter) {
+@mixin footer($bg-color: $gray-darker, $text-color: $white, $link-hover: $gray-lighter, $pipe-color: $gray-lighter) {
   background: $bg-color;
   color: $text-color;
   padding: 1.5em 0 1em;
@@ -7,7 +7,11 @@
     @include wrapper;
 
     a {
-      color: $link-color;
+      color: $text-color;
+
+      &:hover {
+        color: $link-hover;
+      }
     }
 
     .pipe {
