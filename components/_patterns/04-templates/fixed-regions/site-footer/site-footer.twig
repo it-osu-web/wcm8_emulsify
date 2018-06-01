@@ -1,5 +1,6 @@
 <footer id="site-footer" class={{ footer_color }}>
   <div class="site-footer__inner">
+  
     {% include "@organisms/footer-address-block/footer-address-block.twig" with {
       site_name: site_name,
       address_1: address_1,
@@ -11,5 +12,29 @@
       fax: fax,
       contact_email: contact_email,
     }%}
+    
+    <div class="footer-text">
+      
+      {# pattern lab demo text #}
+      {% if pl_footer_text|length %}
+        {{ pl_footer_text }}
+      
+      {% else %}
+      {# drupal site text #}
+        {% set footer_text_value = footer_text.value %}
+        {% if footer_text_value|length == 0 %}
+          {% set footer_text_value = ' ' %}
+        {%  endif %}
+          {% set text_value = {
+            '#type':   'processed_text',
+            '#text':    footer_text_value,
+            '#format':  footer_text.format,
+          } %}
+        {{text_value}}
+        
+      {% endif %}
+      
+    </div>
+    
   </div>
 </footer>

@@ -1,7 +1,7 @@
 @mixin footer($bg-color: $gray-darker, $text-color: $white, $link-hover: $gray-lighter, $pipe-color: $gray-lighter) {
   background: $bg-color;
   color: $text-color;
-  padding: 1.5em 0 1em;
+  padding: 1.5em 0 2em;
 
   .site-footer__inner {
     @include wrapper;
@@ -16,6 +16,10 @@
 
     .pipe {
       color: $pipe-color;
+    }
+
+    .footer-text {
+      margin-top: 2em;
     }
   }
 }

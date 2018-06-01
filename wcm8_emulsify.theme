@@ -118,7 +118,8 @@ function wcm8_emulsify_settings_submit(&$form, \Drupal\Core\Form\FormStateInterf
     'zip',
     'phone',
     'fax',
-    'contact_email'
+    'contact_email',
+    'footer_text'
   ];
   foreach ($siteinfo_vars as $siteinfo_var) {
     $variables[$siteinfo_var] = $siteinfo_config->get($siteinfo_var);
