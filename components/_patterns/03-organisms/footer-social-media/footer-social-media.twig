@@ -6,8 +6,22 @@
  */
 #}
 
-<div id="social-block">
-  <ul class="social-links">
-    <li class="twitter"><a href="{{ twitter }}">Twitter</a></li>
+{% set social_links = [ 
+  { 'name':'twitter', 'url': twitter, 'icon': 'twitter', 'prefix': 'fab' }, 
+  { 'name':'facebook', 'url': facebook, 'icon': 'facebook', 'prefix': 'fab' },
+  { 'name':'linkedin', 'url': linkedin, 'icon': 'linkedin', 'prefix': 'fab' },
+  { 'name':'googleplus', 'url': googleplus, 'icon': 'google-plus-g', 'prefix': 'fab' },
+  { 'name':'youtube', 'url': youtube, 'icon': 'youtube', 'prefix': 'fab' },
+  { 'name':'instagram', 'url': instagram, 'icon': 'instagram', 'prefix': 'fab' },
+  { 'name':'photos', 'url': photos, 'icon': 'camera', 'prefix': 'fas' }
+] %}
+
+<div id="social-block" class="social-media">
+  <ul {{ bem('list', '' ,'social-media') }} >
+  
+    {% for social_link in social_links %}
+      <li class="social-media__item social-media__item--{{ social_link.name }}" ><a href="{{ social_link.url }}" title="{{ social_link.name }} link for {{ site_name }}"><i title="{{ social_link.name }} icon" class="{{ social_link.prefix}} fa-fw fa-2x fa-{{ social_link.icon }}"></i></a></li>
+    
+    {% endfor %}
   </ul>
 </div>
