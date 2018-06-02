@@ -1,1 +1,28 @@
-//empty
+.social-media__list {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media__item a {
+  float: left;
+  background: $gray;
+  color: $white;
+  width: 2.75em;
+  height: 2.75em;
+  margin-right: 1em;
+  text-align: center;
+  padding: 0.75em 0;
+  border-radius: 4px;
+  font-size: 120%;
+}
+
+.social-media__item:last-child a { margin-right: 0; }
+
+//hover colors
+.social-media__item--Twitter a:hover { background: #00aced; }
+.social-media__item--Facebook a:hover { background: #3b5998; }
+.social-media__item--LinkedIn a:hover { background: #007bb6; }
+.social-media__item--Google-Plus a:hover { background: #d34836; }
+.social-media__item--YouTube a:hover { background: #f00; }
+.social-media__item--Instagram a:hover { background: #c13584; }
+.social-media__item--Photo-sharing a:hover { background: #6eb800; }

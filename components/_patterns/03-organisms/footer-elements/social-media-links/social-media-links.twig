@@ -8,12 +8,12 @@
 
 {% set social_links = [ 
   { 'name':'Twitter', 'url': twitter, 'icon': 'twitter', 'prefix': 'fab' }, 
-  { 'name':'Facebook', 'url': facebook, 'icon': 'facebook', 'prefix': 'fab' },
-  { 'name':'LinkedIn', 'url': linkedin, 'icon': 'linkedin', 'prefix': 'fab' },
-  { 'name':'Google Plus', 'url': googleplus, 'icon': 'google-plus-g', 'prefix': 'fab' },
+  { 'name':'Facebook', 'url': facebook, 'icon': 'facebook-f', 'prefix': 'fab' },
+  { 'name':'LinkedIn', 'url': linkedin, 'icon': 'linkedin-in', 'prefix': 'fab' },
+  { 'name':'Google-Plus', 'url': googleplus, 'icon': 'google-plus-g', 'prefix': 'fab' },
   { 'name':'YouTube', 'url': youtube, 'icon': 'youtube', 'prefix': 'fab' },
   { 'name':'Instagram', 'url': instagram, 'icon': 'instagram', 'prefix': 'fab' },
-  { 'name':'Photo service', 'url': photos, 'icon': 'camera', 'prefix': 'fas' }
+  { 'name':'Photo-sharing', 'url': photos, 'icon': 'camera', 'prefix': 'fas' }
 ] %}
 
 <div id="social-media-block" class="social-media">
@@ -25,7 +25,7 @@
     
         <li class="social-media__item social-media__item--{{ social_link.name }}" >
           <a href="{{ social_link.url }}" title="{{ social_link.name }} profile link for {{ site_name }}">
-            <i class="{{ social_link.prefix}} fa-fw fa-2x fa-{{ social_link.icon }}"></i>
+            <i class="{{ social_link.prefix }} fa-fw fa-lg fa-{{ social_link.icon }}"></i>
           </a>
         </li>
       
