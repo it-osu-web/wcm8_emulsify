@@ -2,12 +2,13 @@
   <div class="site-footer__inner">
   
     {% include "@organisms/footer-elements/address-block/address-block.twig" %}
+    {% include "@organisms/footer-elements/social-media-links/social-media-links.twig" %}
     
-    <div class="footer-text">
+    <div id="footer-text-block" class="footer-text">
       
       {# pattern lab demo text #}
       {% if pl_footer_text|length %}
-        {{ pl_footer_text }}
+        <p>{{ pl_footer_text }}</p>
       
       {% else %}
       {# drupal site text #}
@@ -20,13 +21,12 @@
             '#text':    footer_text_value,
             '#format':  footer_text.format,
           } %}
-        {{text_value}}
+        
+        <p>{{text_value}}</p>
         
       {% endif %}
       
     </div>{# end .footer-text #}
-    
-    {% include "@organisms/footer-elements/social-media-links/social-media-links.twig" %}
-    
+
   </div>{# end .site-footer__inner #}
 </footer>

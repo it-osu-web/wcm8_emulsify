@@ -1,32 +1,61 @@
+//footer layout
+#site-footer {
+  padding: 1.5em 0;
+}
+
+.site-footer__inner {
+  @include wrapper;
+}
+
+#address-block {
+  padding-bottom: 1em;
+}
+
+#social-media-block {
+  padding: 0.5em 0;
+}
+
+#footer-text-block {
+  clear: both;
+  padding-top: 1em;
+}
+
+//layout after large breakpoint
+@include large {
+  #address-block {
+    float: left;
+    width: 60%;
+  }
+
+  #social-media-block {
+    float: right;
+    width: 40%;
+    margin-top: -0.65em;
+    margin-right: -0.7em;
+  }
+
+  .social-media__list {
+    text-align: right;
+  }
+}
+
+//footer text
+.footer-text {
+  line-height: 125%;
+}
+
+//mixin for colors
 @mixin footer($bg-color: $gray-darker, $text-color: $white, $link-hover: $gray-lighter, $pipe-color: $gray-lighter) {
   background: $bg-color;
   color: $text-color;
-  padding: 1.5em 0 2em;
 
-  .site-footer__inner {
-    @include wrapper;
+  a { color: $text-color; }
 
-    a {
-      color: $text-color;
+  a:hover { color: $link-hover; }
 
-      &:hover {
-        color: $link-hover;
-      }
-    }
+  .pipe { color: $pipe-color; }
 
-    .pipe {
-      color: $pipe-color;
-    }
-
-    .footer-text {
-      margin-top: 2em;
-      line-height: 125%;
-    }
-    
-    #social-media-block {
-      margin-top: 2em;
-    }
-  }
+  .social-media__item a { color: white; }
 }
 
 #site-footer,
@@ -36,6 +65,10 @@
 
 #site-footer.md-gray {
   @include footer($gray, $white, $gray-lightest, $gray-lightest);
+
+  .social-media__item a {
+    border: 1px solid $gray-lighter;
+  }
 }
 
 #site-footer.lt-gray {
