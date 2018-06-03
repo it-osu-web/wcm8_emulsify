@@ -44,6 +44,19 @@
   line-height: 125%;
 }
 
+//footer login
+.footer-login-link {
+  text-transform: uppercase;
+  font-size: 80%;
+  text-decoration: none;
+  display: block;
+  padding-top: 1.5em;
+}
+
+.footer-login-link:hover {
+  text-decoration: underline;
+}
+
 //mixin for colors
 @mixin footer($bg-color: $gray-darker, $text-color: $white, $link-hover: $gray-lighter, $pipe-color: $gray-lighter) {
   background: $bg-color;

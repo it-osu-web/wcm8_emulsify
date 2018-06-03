@@ -27,6 +27,11 @@
       {% endif %}
       
     </div>{# end .footer-text #}
+    
+    {# show admin_link if selected #}
+    {% if admin_link == 1 %}
+      <a class="footer-login-link" href="/user/login">Admin Login</a>
+    {% endif %}
 
   </div>{# end .site-footer__inner #}
 </footer>
