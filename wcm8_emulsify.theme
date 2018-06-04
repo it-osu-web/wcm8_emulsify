@@ -111,6 +111,7 @@ function wcm8_emulsify_settings_submit(&$form, \Drupal\Core\Form\FormStateInterf
   // Load variables from Site Information module.
   $siteinfo_config = \Drupal::config('wcm8_siteinfo.settings');
   $siteinfo_vars = [
+    'prefix',
     'admin_link',
     'footer_text',
     'address_1', 

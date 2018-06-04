@@ -1,30 +1,47 @@
-@mixin masthead($bg-color: $gray-darker, $text-color: $white) {
+//masthead layout
+#masthead {
   @include clearfix;
 
-  background: $bg-color;
   padding: 1.25em 0;
+}
 
-  .masthead--inner {
-    @include wrapper;
+.masthead__inner {
+  @include wrapper;
+
+  width: 100%;
+  display: table;
+}
+
+#site-name {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.site-name__link {
+  @include heading-xl($font-size: 2.6rem);
+
+  text-decoration: none;
+}
+
+#site-logo {
+  float: right;
+  display: none;
+
+  @include medium {
+    display: block;
   }
+}
 
-  #site-name {
-    @include heading-xl($color: $text-color);
+.site-logo__image {
+  height: 135px;
+}
 
-    float: left;
-    padding-top: 1.5em;
+//mixin for colors
+@mixin masthead($bg-color: $gray-darker, $text-color: $white) {
+  background: $bg-color;
 
-    a:hover {
-      color: $text-color;
-    }
-  }
-
-  #site-logo {
-    float: right;
-
-    img {
-      height: 135px;
-    }
+  .site-name__link {
+    color: $text-color;
   }
 }
 
