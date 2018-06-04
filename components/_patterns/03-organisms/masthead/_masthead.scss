@@ -15,19 +15,28 @@
 #site-name {
   display: table-cell;
   vertical-align: middle;
+
+  @include medium {
+    padding-right: 4em;
+  }
+
 }
 
 .site-name__prefix {
   display: block;
   font-size: 1.4rem;
   font-weight: 300;
-  margin-bottom: -0.25em;
 }
 
 .site-name__link {
-  @include heading-xl($font-size: 2.6rem);
+  @include heading-xl($font-size: 2.4rem);
 
+  line-height: 105%;
   text-decoration: none;
+}
+
+.site-name__link--long {
+  font-size: 2rem;
 }
 
 #site-logo {

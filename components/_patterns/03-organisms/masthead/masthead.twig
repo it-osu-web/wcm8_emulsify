@@ -14,7 +14,12 @@
         <span class="site-name__prefix">{{ prefix }}</span>
       {% endif %}
       
-      <a class="site-name__link" href="/" title="home" rel="home">{{ site_name }}</a>
+      {% if site_name|length > 40 %}
+        <a class="site-name__link site-name__link--long" href="/" title="home" rel="home">{{ site_name }}</a>
+      {% else %}
+        <a class="site-name__link" href="/" title="home" rel="home">{{ site_name }}</a>
+      {% endif %}
+      
     </div>
     <div id="site-logo">
       <a class="site-logo__link" href="http://osu.edu" target="_blank"><img class="site-logo__image" src="{{ base_path ~ directory }}/images/osu-logos/stacked/osu-stacked-{{ masthead_color }}.svg" alt="The Ohio State University" /></a>
