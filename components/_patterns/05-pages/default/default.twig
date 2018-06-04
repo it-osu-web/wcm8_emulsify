@@ -31,9 +31,7 @@
 
 {{ page.highlighted }}
 
-{% include "@templates/fixed-regions/site-header/site-header.twig" with {
-  site_name: site_name
-}%}
+{% include "@templates/fixed-regions/site-header/site-header.twig" %}
 
 {{ page.primary_menu }}
 {{ page.hero }}
@@ -63,6 +61,4 @@
 
 {{ page.pre_footer }}
 
-{% include "@templates/fixed-regions/site-footer/site-footer.twig" with {
-  site_name: site_name
-}%}
+{% include "@templates/fixed-regions/site-footer/site-footer.twig" %}

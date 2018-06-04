@@ -4,9 +4,9 @@ items:
   - name: $white
     value: '#fff'
   - name: $near-white
-    value: '#f8f8f8'
+    value: '#f7f7f7'
   - name: $gray-lightest
-    value: '#ececec'
+    value: '#eaeaea'
   - name: $gray-lighter
     value: '#ccc'
   - name: $gray-light

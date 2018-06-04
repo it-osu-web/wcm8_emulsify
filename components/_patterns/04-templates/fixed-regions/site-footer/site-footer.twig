@@ -1,15 +1,37 @@
 <footer id="site-footer" class={{ footer_color }}>
   <div class="site-footer__inner">
-    {% include "@organisms/footer-address-block/footer-address-block.twig" with {
-      site_name: site_name,
-      address_1: address_1,
-      address_2: address_2,
-      city: city,
-      state: state,
-      zip: zip,
-      phone: phone,
-      fax: fax,
-      contact_email: contact_email,
-    }%}
-  </div>
+  
+    {% include "@organisms/footer-elements/address-block/address-block.twig" %}
+    {% include "@organisms/footer-elements/social-media-links/social-media-links.twig" %}
+    
+    <div id="footer-text-block" class="footer-text">
+      
+      {# pattern lab demo text #}
+      {% if pl_footer_text|length %}
+        <p>{{ pl_footer_text }}</p>
+      
+      {% else %}
+      {# drupal site text #}
+        {% set footer_text_value = footer_text.value %}
+        {% if footer_text_value|length == 0 %}
+          {% set footer_text_value = ' ' %}
+        {%  endif %}
+          {% set text_value = {
+            '#type':   'processed_text',
+            '#text':    footer_text_value,
+            '#format':  footer_text.format,
+          } %}
+        
+        <p>{{text_value}}</p>
+        
+      {% endif %}
+      
+    </div>{# end .footer-text #}
+    
+    {# show admin_link if selected #}
+    {% if admin_link == 1 %}
+      <a class="footer-login-link" href="/user/login">Admin Login</a>
+    {% endif %}
+
+  </div>{# end .site-footer__inner #}
 </footer>
