@@ -1,0 +1,83 @@
+//masthead layout
+#masthead {
+  @include clearfix;
+
+  padding: 1.25em 0;
+}
+
+.masthead__inner {
+  @include wrapper;
+}
+
+#site-name {
+  float: left;
+  display: table;
+
+  @include medium {
+    padding-right: 2em;
+    height: 135px;
+  }
+}
+
+.site-name__inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.site-name__prefix {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.site-name__link {
+  @include heading-xl($font-size: 2.4rem);
+
+  line-height: 105%;
+  text-decoration: none;
+}
+
+.site-name__link--long {
+  font-size: 2rem;
+}
+
+#site-logo {
+  display: none;
+  float: right;
+
+  @include medium {
+    display: block;
+  }
+}
+
+.site-logo__image {
+  height: 135px;
+  width: auto;
+}
+
+//mixin for colors
+@mixin masthead($bg-color: $gray-darker, $text-color: $white) {
+  background: $bg-color;
+
+  .site-name__prefix,
+  .site-name__link {
+    color: $text-color;
+  }
+}
+
+#masthead,
+#masthead.dk-gray {
+  @include masthead;
+}
+
+#masthead.md-gray {
+  @include masthead($gray);
+}
+
+#masthead.lt-gray {
+  @include masthead($gray-lightest, $gray-darker);
+}
+
+#masthead.white {
+  @include masthead($white, $gray-dark);
+}
