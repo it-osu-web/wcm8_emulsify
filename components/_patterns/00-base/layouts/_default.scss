@@ -1,0 +1,36 @@
+//
+// General Layout (example code)
+//
+
+/*
+
+.layout-container {
+  @include wrapper;
+}
+
+.header,
+.main,
+.footer {
+  @include wrapper;
+
+  margin-bottom: 4em;
+}
+
+.main-sidebar {
+  @include large {
+    @include grid-span(3,9);
+  }
+}
+
+.main-content {
+  padding: 0 1em;
+
+  @include large {
+    padding: 0;
+
+    &--with-sidebar {
+      @include grid-span(8,1);
+    }
+  }
+}
+*/
