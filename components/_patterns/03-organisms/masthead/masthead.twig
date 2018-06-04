@@ -9,6 +9,11 @@
 <div id="masthead" class={{ masthead_color }}>
   <div class="masthead__inner">
     <div id="site-name">
+      
+      {% if prefix|length %}
+        <span class="site-name__prefix">{{ prefix }}</span>
+      {% endif %}
+      
       <a class="site-name__link" href="/" title="home" rel="home">{{ site_name }}</a>
     </div>
     <div id="site-logo">
