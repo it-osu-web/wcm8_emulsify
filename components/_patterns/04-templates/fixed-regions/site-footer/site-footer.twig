@@ -28,9 +28,11 @@
       
     </div>{# end .footer-text #}
     
-    {# show admin_link if selected #}
+    {# show admin_link if selected and user is not logged in #}
     {% if admin_link == 1 %}
-      <a class="footer-login-link" href="/user/login">Admin Login</a>
+      {% if not logged_in %}
+        <a class="footer-login-link" href="/user/login">Admin Login</a>
+      {% endif %}
     {% endif %}
 
   </div>{# end .site-footer__inner #}
