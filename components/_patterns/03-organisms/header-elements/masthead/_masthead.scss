@@ -7,19 +7,21 @@
 
 .masthead__inner {
   @include wrapper;
-
-  width: 100%;
-  display: table;
 }
 
 #site-name {
-  display: table-cell;
-  vertical-align: middle;
+  float: left;
+  display: table;
 
   @include medium {
-    padding-right: 4em;
+    padding-right: 2em;
+    height: 135px;
   }
+}
 
+.site-name__inner {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .site-name__prefix {
@@ -40,8 +42,8 @@
 }
 
 #site-logo {
-  float: right;
   display: none;
+  float: right;
 
   @include medium {
     display: block;
@@ -50,6 +52,7 @@
 
 .site-logo__image {
   height: 135px;
+  width: auto;
 }
 
 //mixin for colors

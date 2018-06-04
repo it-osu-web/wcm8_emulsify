@@ -10,15 +10,17 @@
   <div class="masthead__inner">
     <div id="site-name">
       
-      {% if prefix|length %}
-        <span class="site-name__prefix">{{ prefix }}</span>
-      {% endif %}
-      
-      {% if site_name|length > 40 %}
-        <a class="site-name__link site-name__link--long" href="/" title="home" rel="home">{{ site_name }}</a>
-      {% else %}
-        <a class="site-name__link" href="/" title="home" rel="home">{{ site_name }}</a>
-      {% endif %}
+      <div class="site-name__inner">
+        {% if prefix|length %}
+          <span class="site-name__prefix">{{ prefix }}</span>
+        {% endif %}
+        
+        {% if site_name|length > 40 %}
+          <a class="site-name__link site-name__link--long" href="/" title="home" rel="home">{{ site_name }}</a>
+        {% else %}
+          <a class="site-name__link" href="/" title="home" rel="home">{{ site_name }}</a>
+        {% endif %}
+      </div>
       
     </div>
     <div id="site-logo">
