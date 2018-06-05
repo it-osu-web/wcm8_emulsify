@@ -16,29 +16,11 @@
 #}
 
 
-{#
-/**
- * Regions will be assigned a "region-inner" constrained div by default.
- * If you want a particular region to be full width instead,
- * add the region name to the "full_width_regions" array.
- */
-#}
-
-
-{% set full_width_regions = ['hero'] %}
-
 {% set region_base_class = '' ~ region %}
 
-{% if content %}
-  {% if region in full_width_regions %}
-    <div {{ bem('region', [region_base_class]) }} >
-      {{ content }}
-    </div>
-  {% else %}
-    <div {{ bem('region', [region_base_class]) }} >
-      <div {{ bem('region-inner', [region_base_class]) }} >
-        {{ content }}
-      </div>
-    </div>
-  {% endif %}
-{% endif %}
+<div {{ bem('region', [region_base_class]) }} >
+  <div {{ bem('region-inner', [region_base_class]) }} >
+    {{ content }}
+  </div>
+</div>
+

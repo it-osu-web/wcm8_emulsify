@@ -11,11 +11,15 @@
   {% set main_content_modifiers = main_content_modifiers|merge(['with-sidebar']) %}
 {% endif %}
 
+
+{# start layout #}
+
+{# fixed header #}
+{% include "@organisms/fixed-regions/site-header/site-header.twig" %}
+
+{# start layout container #}
 <div {{ bem('layout-container', (layout_modifiers)) }}>
 
-  {# fixed header #}
-  {% include "@organisms/fixed-regions/site-header/site-header.twig" %}
-  
   {% block primary_menu %}
   {% endblock %}
   
@@ -45,8 +49,11 @@
   
   {% block pre_footer %}
   {% endblock %}
-  
-  {# fixed footer #}
-  {% include "@organisms/fixed-regions/site-footer/site-footer.twig" %}
     
 </div>
+{# end layout container #}
+
+{# fixed footer #}
+{% include "@organisms/fixed-regions/site-footer/site-footer.twig" %}
+
+{# end layout #}
