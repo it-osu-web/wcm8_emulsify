@@ -3,7 +3,7 @@
   color: $text-color;
   border-bottom: 5px solid $red;
 
-  .navbar--inner {
+  .navbar__inner {
     @include wrapper;
   }
 
