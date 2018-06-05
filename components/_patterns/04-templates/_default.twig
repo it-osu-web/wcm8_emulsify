@@ -12,10 +12,16 @@
 {% endif %}
 
 <div {{ bem('layout-container', (layout_modifiers)) }}>
-  {% block page_header %}
-    {% include "@organisms/fixed-regions/site-header/site-header.twig" %}
-  {% endblock %}
 
+  {# fixed header #}
+  {% include "@organisms/fixed-regions/site-header/site-header.twig" %}
+  
+  {% block primary_menu %}
+  {% endblock %}
+  
+  {% block hero %}
+  {% endblock %}
+   
   {% block page_system %}
   {% endblock %}
 
@@ -31,10 +37,16 @@
     <div {{ bem(main_content_base_class, (main_content_modifiers), main_content_blockname) }}>
       {% block page_content %}{% endblock %}
     </div>
+    
+    {% block content_after %}
+    {% endblock %}
 
   </main>
-
-  {% block page_footer %}
-    {% include "@organisms/fixed-regions/site-footer/site-footer.twig" %}
+  
+  {% block pre_footer %}
   {% endblock %}
+  
+  {# fixed footer #}
+  {% include "@organisms/fixed-regions/site-footer/site-footer.twig" %}
+    
 </div>
