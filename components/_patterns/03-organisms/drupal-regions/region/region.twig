@@ -15,8 +15,12 @@
  */
 #}
 
-{% include "@organisms/drupal-regions/region/region.twig" with {
-  content: content,
-  attributes: attributes,
-  region: region
-} %}
+
+{% set region_base_class = '' ~ region %}
+
+<div {{ bem('region', [region_base_class]) }} >
+  <div {{ bem('region-inner', [region_base_class]) }} >
+    {{ content }}
+  </div>
+</div>
+

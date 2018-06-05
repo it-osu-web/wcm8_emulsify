@@ -1,0 +1,26 @@
+.layout-container {
+  @include wrapper;
+}
+
+/*
+.main {
+
+}
+
+.main-sidebar {
+  background: aqua;
+
+  @include large {
+    @include grid-span(3,9);
+  }
+}
+
+.main-content {
+
+  @include large {
+    &--with-sidebar {
+      @include grid-span(8,1);
+    }
+  }
+}
+*/

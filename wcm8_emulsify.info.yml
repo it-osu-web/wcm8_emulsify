@@ -7,7 +7,6 @@ core: 8.x
 # Libraries (These are loaded on every page. Use https://www.drupal.org/developing/api/8/assets#twig whenever possible.)
 libraries:
   - 'wcm8_emulsify/global'
-  # - 'wcm8_emulsify/typekit'
 
 # Libraries override allows you to remove libraries added by other projects.
 # libraries-override:
@@ -24,15 +23,15 @@ ckeditor_stylesheets:
 
 # Drupal regions
 regions:
-  highlighted: 'Highlighted'
   primary_menu: 'Primary Menu'
   hero: 'Hero'
   breadcrumb: 'Breadcrumbs'
-  local_tasks: 'Local Tasks'
+  highlighted: 'Highlighted'
+  help: 'Help'
   content: 'Content'
   sidebar: 'Sidebar'
-  content_after: 'Content: After'
-  pre_footer: 'Pre-Footer: Page-specific footer info'
+  content_after: 'Content After'
+  pre_footer: 'Pre-Footer'
   
 # Note: there are additional pseudo-regions that are called "fixed-regions" in this theme.
 # These regions are page fixtures like site-header and site-footer.
