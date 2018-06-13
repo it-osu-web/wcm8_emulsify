@@ -7,7 +7,7 @@
   {# PL content in YAML #}
   {% else %}
     {% for card in cards %}
-      {% include "@molecules/card/01-card.twig" with {
+      {% include "@molecules/03-card/01-card.twig" with {
         "card_blockname": card.blockname,
         "card_modifiers": card.card_modifiers,
         "card_img_src": card.card_img_src,

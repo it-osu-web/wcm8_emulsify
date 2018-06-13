@@ -10,7 +10,7 @@
   {% else %}
     {% for box in boxes %}
       {% set class = "info-box" %}
-      {% include "@molecules/info-box/info-box.twig" with {
+      {% include "@molecules/04-info-box/info-box.twig" with {
         "ib_modifiers": box.ib_modifiers,
         "ib_blockname": box.ib_blockname,
         "infobox_title": box.infobox_title,
