@@ -15,12 +15,19 @@
  */
 #}
 
+{# regions in this array will not get a "region-inner" div #}
+{% set no_inner = ['content', 'sidebar'] %}
 
 {% set region_base_class = '' ~ region %}
 
-<div {{ bem('region', [region_base_class]) }} >
-  <div {{ bem('region-inner', [region_base_class]) }} >
-    {{ content }}
+{% if content %}
+  <div {{ bem('region', [region_base_class]) }} >
+    {% if region in no_inner %}
+      {{ content }}
+    {% else %}
+      <div {{ bem('region-inner', [region_base_class]) }} >
+        {{ content }}
+      </div>
+    {% endif %}
   </div>
-</div>
-
+{% endif %}

@@ -17,14 +17,7 @@
 <blockquote
   {{ bem(blockquote_base_class, (blockquote_modifiers), blockquote_blockname) }}
 >
-  {% if blockquote_base_class == 'pulled-quote' %}
-    <div class="pulled-quote__icon">
-      <i class="fas fa-quote-left fa-3x"></i>
-    </div>
-  {% endif %}
-  
   {% block blockquote_content %}
-    <div class="{{ blockquote_base_class }}__text">{{ blockquote_content }}</div>
+    <p>{{ blockquote_content }}</p>
   {% endblock %}
-    
 </blockquote>

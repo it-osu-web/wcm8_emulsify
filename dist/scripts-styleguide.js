@@ -113,12 +113,30 @@
 })();
 'use strict';
 
+(function ($) {
+
+  Drupal.behaviors.blockquote = {
+    attach: function attach(context, settings) {
+
+      $(context).find('blockquote').each(function () {
+
+        var pq_icon = '<div class="pulled-quote__icon"><i class="fas fa-quote-left fa-3x"></i></div>';
+
+        if ($(this).hasClass('pulled-quote')) {
+          $('.pulled-quote p').wrap('<div class="pulled-quote__text"></div>');
+          $('.pulled-quote__text').before(pq_icon);
+        }
+      });
+    }
+  };
+})(jQuery);
 /**
  * @file
  * A JavaScript file containing the main menu functionality (small/large screen)
  *
  */
 
+/*
 // JavaScript should be made compatible with libraries other than jQuery by
 // wrapping it with an "anonymous closure". See:
 // - https://drupal.org/node/1446420
@@ -130,13 +148,11 @@
 //   Drupal.behaviors.mainMenu = {
 //     attach: function (context) {
 
-(function () {
-  // REMOVE IF DRUPAL.
+(function () { // REMOVE IF DRUPAL.
 
   'use strict';
 
   // Use context instead of document IF DRUPAL.
-
   var toggle_expand = document.getElementById('toggle-expand');
   var menu = document.getElementById('main-nav');
   var expand_menu = menu.getElementsByClassName('expand-sub');
@@ -157,7 +173,10 @@
       sub_menu.classList.toggle('main-menu--sub-open');
     });
   }
+
 })(); // REMOVE IF DRUPAL.
 
 // })(Drupal); // UNCOMMENT IF DRUPAL.
+*/
+"use strict";
 //# sourceMappingURL=scripts-styleguide.js.map
