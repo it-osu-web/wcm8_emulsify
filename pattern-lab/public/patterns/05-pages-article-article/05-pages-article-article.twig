@@ -1,18 +1,11 @@
 {% embed "@templates/_default.twig" with {
   sidebar: TRUE,
-  menu_items: header.menu_items,
-  footer_menu_items: footer.menu_items,
 } %}
 
   {% block page_content %}
-    {% include "@atoms/02-text/00-headings/_heading.twig" with {
-      "heading_level": 1,
-      "heading": 'This is a Real Article',
-      "heading_modifiers": ["margin"],
-    } %}
-
-    {% include "@atoms/02-text/text/01-paragraph.twig" with {
-      paragraph_content: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+    {% include "@organisms/node-types/node-article/node-article.twig" with {
+      content: node_content,
+      display_submitted: TRUE,
     } %}
   {% endblock %}
 
@@ -25,13 +18,6 @@
     {% include "@atoms/02-text/text/01-paragraph.twig" with {
       paragraph_content: "This is sidebar content ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
     } %}
-  {% endblock %}
-  
-  {% block content_after %}
-      {% include "@organisms/drupal-regions/region/region.twig" with {
-        "region": "content-after",
-        "content": "test content",
-      } %}
   {% endblock %}
 
 {% endembed %}

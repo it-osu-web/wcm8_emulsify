@@ -1,0 +1,11 @@
+<dl id="accordionGroup" role="presentation" class="Accordion" data-allow-multiple>
+
+  {% for accordion_item in accordion_items %}
+    {% include "@molecules/01-accordion-group/_accordion-item.twig" with {
+      "accordion_item_number": accordion_item.accordion_item_number,
+      "accordion_term": accordion_item.accordion_term,
+      "accordion_def": accordion_item.accordion_def,
+    } %}
+  {% endfor %}
+  
+</dl>
