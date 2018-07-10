@@ -6,10 +6,6 @@
  */
 #}
 
-{% if base_path|length == 0 %}
-  {% set base_path = "/dist" %}
-{% endif %}
-
 <div id="masthead" class={{ masthead_color }}>
   <div class="masthead__inner">
     <div id="site-name">
@@ -28,7 +24,7 @@
 
     </div>
     <div id="site-logo">
-      <a class="site-logo__link" href="http://osu.edu" target="_blank"><img class="site-logo__image" src="{{ base_path ~ directory }}/img/osu-logos/stacked/osu-stacked-{{ masthead_color }}.svg" alt="The Ohio State University" /></a>
+      <a class="site-logo__link" href="http://osu.edu" target="_blank"><img class="site-logo__image" src="{{ base_path ~ directory }}/images/osu-logos/stacked/osu-stacked-{{ masthead_color }}.svg" alt="The Ohio State University" /></a>
     </div>
   </div>
 </div>
