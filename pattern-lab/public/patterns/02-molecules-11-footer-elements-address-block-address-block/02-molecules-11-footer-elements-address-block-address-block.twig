@@ -7,7 +7,7 @@
 #}
 
 {% if base_path|length == 0 %}
-  {% set base_path = "https://it-osu-web.github.io/wcm8_emulsify/pattern-lab/public" %}
+  {% set base_path = "/components" %}
 {% endif %}
 
 <div id="address-block">
@@ -16,22 +16,22 @@
   </div>
   <address id="site-address">
     <p class="site-name">{{ site_name }}</p>
-    
+
     {% if address_1|length and address_2|length %}
       <p>{{ address_1 }}<span class="pipe"> | </span>{{ address_2 }}<span class="pipe"> | </span>{{ city }}, {{ state }} {{ zip }}</p>
     {% else %}
       <p>{{ address_1 }}{{ address_2 }}<span class="pipe"> | </span>{{ city }}, {{ state }} {{ zip }}</p>
     {% endif %}
-  
-    {% if phone|length and fax|length %}  
+
+    {% if phone|length and fax|length %}
       <p>Phone: <a href="tel:{{ phone }}">{{ phone }}</a><span class="pipe"> | </span>Fax: {{ fax }}</p>
     {% else %}
       <p> {% if phone|length %} Phone: <a href="tel:{{ phone }}">{{ phone }}</p> {% elseif fax|length %} Fax: {{ fax }} {% endif %}</p>
     {% endif %}
-    
+
     {% if contact_email|length %}
     <p>Email: <a href="mailto:{{ contact_email }}">{{ contact_email }}</a></p>
     {% endif %}
-  
+
   </address>
 </div>
