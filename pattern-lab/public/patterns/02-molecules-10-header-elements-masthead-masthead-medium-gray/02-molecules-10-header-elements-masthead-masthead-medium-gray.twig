@@ -6,6 +6,10 @@
  */
 #}
 
+{% if base_path|length == 0 %}
+  {% set base_path = "" %}
+{% endif %}
+
 <div id="masthead" class={{ masthead_color }}>
   <div class="masthead__inner">
     <div id="site-name">
